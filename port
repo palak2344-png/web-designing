@@ -1,0 +1,395 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhay Rana | Full Stack Developer</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b0b0f;
+      color: #f5f5f5;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 8%;
+      border-bottom: 1px solid #25252d;
+      position: sticky;
+      top: 0;
+      background: #0b0b0f;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #b6b6c2;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #9b8cff;
+    }
+
+    section {
+      padding: 85px 8%;
+    }
+
+    .hero {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .tag {
+      color: #a99bff;
+      letter-spacing: 3px;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(42px, 8vw, 78px);
+      line-height: 1.15;
+      margin: 15px 0;
+    }
+
+    h1 span {
+      color: #a99bff;
+    }
+
+    h2 {
+      font-size: 35px;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      color: #b6b6c2;
+      max-width: 650px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #a99bff;
+      color: #111;
+      padding: 12px 22px;
+      border-radius: 8px;
+      font-weight: bold;
+      margin: 8px 8px 8px 0;
+    }
+
+    .btn:hover {
+      background: #c0b6ff;
+    }
+
+    .outline {
+      background: transparent;
+      border: 1px solid #555568;
+      color: white;
+    }
+
+    .muted {
+      color: #aaaab8;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: #14141b;
+      border: 1px solid #292934;
+      padding: 25px;
+      border-radius: 14px;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #a99bff;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      color: #c0b6ff;
+    }
+
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 35px;
+      margin-top: 30px;
+    }
+
+    .stats strong {
+      display: block;
+      font-size: 28px;
+      color: #a99bff;
+    }
+
+    .skills span {
+      display: inline-block;
+      background: #22222d;
+      border: 1px solid #383846;
+      border-radius: 7px;
+      padding: 8px 13px;
+      margin: 5px;
+      font-size: 14px;
+    }
+
+    .timeline {
+      border-left: 2px solid #a99bff;
+      padding-left: 25px;
+      margin-top: 30px;
+    }
+
+    .job {
+      margin-bottom: 30px;
+    }
+
+    .job h3 {
+      color: #c0b6ff;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      border-top: 1px solid #25252d;
+      color: #9999a8;
+      font-size: 14px;
+    }
+
+    @media (max-width: 650px) {
+      header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      section {
+        padding: 60px 6%;
+      }
+
+      h2 {
+        font-size: 29px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a href="#home" class="logo">Abhay<span style="color:#a99bff">.</span></a>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <p class="tag">Welcome to my portfolio</p>
+    <h1>Hey, I'm<br><span>Abhay Rana</span></h1>
+    <h2>Full Stack Developer</h2>
+    <p class="subtitle">
+      I build and craft digital experiences that deliver real impact.
+      I enjoy creating modern, scalable websites and applications.
+    </p>
+    <div>
+      <a href="#projects" class="btn">Explore My Work ↗</a>
+      <a href="#contact" class="btn outline">Let's Connect</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <p class="tag">Get to know me</p>
+    <h2>About Me.</h2>
+    <p class="subtitle">
+      I'm a passionate full-stack developer who enjoys building
+      useful web applications with clean code and thoughtful design.
+      My interests include React, Next.js, Node.js and creating
+      intuitive digital experiences.
+    </p>
+
+    <div class="stats">
+      <div><strong>4+</strong><span class="muted">Years Experience</span></div>
+      <div><strong>20+</strong><span class="muted">Projects Delivered</span></div>
+      <div><strong>20+</strong><span class="muted">Happy Clients</span></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <p class="tag">What I've built</p>
+    <h2>Featured Projects.</h2>
+    <p class="muted">A selection of projects and development work.</p>
+
+    <div class="grid">
+      <article class="card">
+        <h3>ResumeFreePro</h3>
+        <p class="muted">
+          A resume-building platform featuring templates,
+          AI-powered suggestions and PDF export.
+        </p>
+        <p style="margin-top:15px">Next.js · React · TypeScript</p>
+        <a class="btn" href="https://resumefreepro.com"
+           target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+      </article>
+
+      <article class="card">
+        <h3>Modern React CLI</h3>
+        <p class="muted">
+          A developer tool for creating React and TypeScript
+          projects with modern development tools.
+        </p>
+        <p style="margin-top:15px">Node.js · React · Vite</p>
+        <a class="btn outline"
+           href="https://github.com/" target="_blank"
+           rel="noopener noreferrer">View Code ↗</a>
+      </article>
+
+      <article class="card">
+        <h3>HealthMug</h3>
+        <p class="muted">
+          An online healthcare platform offering wellness
+          products and digital shopping experiences.
+        </p>
+        <p style="margin-top:15px">React · Node.js · MongoDB</p>
+        <a class="btn outline"
+           href="https://www.healthmug.com"
+           target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills">
+    <p class="tag">My technical toolkit</p>
+    <h2>Skills & Expertise.</h2>
+
+    <div class="skills">
+      <h3>Languages</h3>
+      <span>JavaScript</span>
+      <span>TypeScript</span>
+      <span>Python</span>
+      <span>HTML5</span>
+      <span>CSS3</span>
+
+      <br><br>
+      <h3>Frameworks & Libraries</h3>
+      <span>React</span>
+      <span>Next.js</span>
+      <span>Node.js</span>
+      <span>Tailwind CSS</span>
+      <span>Express</span>
+
+      <br><br>
+      <h3>Databases & Tools</h3>
+      <span>MongoDB</span>
+      <span>PostgreSQL</span>
+      <span>Git</span>
+      <span>Docker</span>
+      <span>AWS</span>
+      <span>Figma</span>
+    </div>
+  </section>
+
+  <section id="experience">
+    <p class="tag">My professional journey</p>
+    <h2>Experience.</h2>
+
+    <div class="timeline">
+      <div class="job">
+        <h3>Senior Frontend Engineer</h3>
+        <p class="muted">Apr 2025 – Present · Stantech AI</p>
+        <p>
+          Building responsive interfaces, reusable components
+          and modern web application experiences.
+        </p>
+      </div>
+
+      <div class="job">
+        <h3>Senior Frontend Developer</h3>
+        <p class="muted">Oct 2024 – Apr 2025 · QuantX Technology</p>
+        <p>
+          Developing interactive dashboards and real-time
+          web interfaces using modern frontend technologies.
+        </p>
+      </div>
+
+      <div class="job">
+        <h3>Frontend Developer</h3>
+        <p class="muted">Previous Experience</p>
+        <p>
+          Working on web applications, performance improvements
+          and responsive user interfaces.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <p class="tag">Have a project in mind?</p>
+    <h2>Let's Connect.</h2>
+    <p class="subtitle" style="margin: 15px auto">
+      Have a project idea or want to discuss technology?
+      Feel free to get in touch.
+    </p>
+
+    <a href="mailto:hi@abhayrana.com" class="btn">Send Me an Email ↗</a>
+    <a href="https://www.linkedin.com/" class="btn outline"
+       target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+    <a href="https://github.com/" class="btn outline"
+       target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+  </section>
+
+  <footer>
+    © 2026 Abhay Rana. All rights reserved.
+  </footer>
+
+</body>
+</html>
